@@ -300,6 +300,10 @@
 
 	\begin{itemize}[<+->]
 		\item Tune compiler options: 40\% performance improvement
+		\begin{itemize}[<+->]
+			\item Before: \verb|ifort -O3 -heap-arrays|
+			\item After: \scriptsize\verb|ifort -ipo -no-prec-div -fp-model fast=2 -xHost -O3 -heap-arrays|
+		\end{itemize}
 		\item Automatic multithreading (\verb|-parallel|)
 		\begin{itemize}[<+->]
 			\item Near linear scaling to 4 threads
